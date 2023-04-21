@@ -1,0 +1,473 @@
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  h5 {
+    color: black;
+  
+  }
+  
+  :root {
+    --container-bg-color: #333;
+    --left-bg-color: rgba(177, 174, 174, 0.7);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+
+  /*
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+  }
+  
+  .cuisines-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  
+  
+  h4 {
+    color: black;
+  }
+  
+  /* Cuisines UI Layout */
+  
+  /* .cuisines-block {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: lightgray;
+    margin: 10px;
+    margin-top: 15px;
+  }
+  
+  .cuisines-container {
+    text-align: center;
+  }
+  
+  .cuisines-block img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .cuisines-header {
+    width: 100%;
+    float: none;
+    margin: 15px;
+    color: black;
+  }
+  
+  .mexican-image img {
+    width: 75%;
+    float: none;
+  }
+  
+  
+  .cuisines-description {
+    width: 100%;
+    float: none;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .cuisines-footer {
+    width: 15%;
+    float: right;
+    margin: 10px;
+    color: black;
+  }
+  
+  */
+
+  /* Recipe Webpage 
+  
+  .div {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 98%;
+  }
+  
+  .recipe-one {
+    background-color: limegreen;
+  }
+  
+  .recipe-two {
+    background-color: orange;
+  }
+  
+  .recipe-three {
+    background-color: hotpink;
+  }
+  
+  .recipe-four {
+    background-color: grey;
+  }
+  
+  .window {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+  }
+  
+  .window:nth-child(1) {
+    background: red;
+  }
+  
+  .window:nth-child(2) {
+    background: green;
+  }
+  
+  .window:nth-child(3) {
+    background: blue;
+  }
+
+  
+ .recipe-block {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 10px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .recipe-container {
+    text-align: left;
+    margin-left: 250px;
+  }
+  
+  .recipe-block img {
+    width: 130px;
+    height: 80px;
+    margin-top: 2px;
+  }
+  
+  .recipe-header {
+    width: 100%;
+    float: none;
+    margin: 15px;
+    color: black;
+  }
+  
+  .recipe-description {
+    width: 100%;
+    float: none;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .recipe-footer {
+    width: 15%;
+    float: right;
+    margin: 10px;
+    color: black;
+  }
+
+  */
+
+  
+  .container1 {
+    background-color: white;
+    padding-top: 25px;
+    width: 100%;
+    height: 25%;
+    margin: 0 auto;
+  }
+
+  .mexicanDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 70px;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .mexicanDiv > h1 {
+    text-align: center;
+  }
+
+  .mexicanDiv > p {
+    text-align: center;
+  }
+
+
+  .italianDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .italianDiv > h1 {
+    text-align: center;
+  }
+
+  .italianDiv > p {
+    text-align: center;
+  }
+
+  .indianDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .indianDiv > h1 {
+    text-align: center;
+  }
+
+  .indianDiv > p {
+    text-align: center;
+  }
+
+  .americanDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .americanDiv > h1 {
+    text-align: center;
+  }
+
+  .americanDiv > p {
+    text-align: center;
+  }
+
+
+  .chineseDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+  }
+
+  .chineseDiv > h1 {
+    text-align: center;
+  }
+
+  .chineseDiv > p {
+    text-align: center;
+  }
+  /*.cuisine-choice-container>div {
+    background-color: #c4d1cb;
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    height: 150px;
+    width: 150px;
+    margin-left: 135px;
+  }*/
+
+  .container2 {
+    background-color: grey;
+    padding-top: 25px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+
+  .container3 {
+    background-color: white;
+    padding-top: 25px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  .container4 {
+    background-color: grey;
+    padding-top: 25px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  .button1 {
+    border: #111;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 85px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+
+  .button2 {
+    border: #111;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: -120px;
+    cursor: pointer;
+  }
+
+  .img-recipe {
+    height: 60px;
+    width: 110px;
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+
+  .h1-rec-cus {
+    float: left;
+    margin-right: 0px;
+    margin-left: 50px;
+    margin-top: 70px;
+  }
+
+  .breakfastDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    border-color: black;
+    display: inline-block;
+    margin-left: 220px;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .breakfastDiv > h1 {
+    text-align: center;
+  }
+
+  .breakfastDiv > p {
+    text-align: center;
+  }
+
+
+
+
+
+  .occasionDiv {
+    background-color: rgb(173, 149, 149);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 400px;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .occasionDiv > h1 {
+    text-align: center;
+  }
+
+  .occasionDiv > p {
+    text-align: center;
+  }
+
+
+
+  .meal-choice-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: rosybrown;
+    padding-top: 25px;
+    row-gap: 0;
+    width: 100%;
+    height: 25%;
+
+  }
+
+  .meal-choice-container>div {
+    background-color: #c4d1cb;
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    height: 150px;
+    width: 150px;
+    margin-left: 135px;
+  }
+
+
+  .button {
+    display: flexbox;
+    width: 10rem;
+    text-align: center;
+    color: black;
+    border: black solid 0.2rem;
+    padding-left: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }

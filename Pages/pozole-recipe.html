@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../cuisines.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384">
+    <title>Pozole Recipie</title>
+</head>
+
+<body>
+    <!--
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyB4MaPQRuTJtGr57hT6-CMwmAUBALqAkKA",
+              authDomain: "food-recipe-site-a9b34.firebaseapp.com",
+              databaseURL: "https://food-recipe-site-a9b34-default-rtdb.europe-west1.firebasedatabase.app",
+              projectId: "food-recipe-site-a9b34",
+              storageBucket: "food-recipe-site-a9b34.appspot.com",
+              messagingSenderId: "608052694362",
+              appId: "1:608052694362:web:a5abf05de0810ae217b763",
+              measurementId: "G-XBY7JES9ER"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+          --->
+
+    <ul>
+        <li class="navbar">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="recipe.html">Recipies</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="surprise_me.html">Surprise Me</a></li>
+        <li style="float:right"><a href="login.html">Login</a></li>
+        <li style="float:right"><a href="#about us">About Us</a></li>
+    </ul>
+
+    <div class="nutrition">
+        <div class="row">
+            <form id="recipe-check-form">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Recipe Title</label>
+                    <input type="text" class="form-control" id="title" name="title" />
+                </div>
+                <div class="mb-3">
+                    <label for="recipe" class="form-label">Recipe Nutrition</label>
+                    <br>
+                    <textarea class="form-control" id="recipe" name="recipe" rows="4"></textarea>
+                    <br>
+                </div>
+                <button class="btn btn-primary">Submit Recipe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" id="output">
+
+    </div>
+
+    <script>
+        (function () {
+            const titleInput = document.getElementById('title')
+            const recipeInput = document.getElementById('recipe');
+            const output = document.getElementById('output');
+            const appId = '88df4aaa';
+            const apiKey = '8bd712b29f5a15bb39bb4ca4f997f862';
+
+            function fetchRecipe() {
+                let title = titleInput.value;
+                let ingr = recipeInput.value.split('\n');
+
+                return fetch(`https://api.edamam.com/api/nutrition-details?app_id=${appId}&app_key=${apiKey}`, {
+                    method: 'POST',
+                    cache: 'no-cache',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ ingr })
+                }).then(response => response.json());
+            }
+
+            document.getElementById('recipe-check-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                fetchRecipe().then(data => {
+                    let fragments = [];
+
+                    Object.keys(data.totalDaily).forEach(key => {
+                        let obj = data.totalDaily[key]
+
+                        fragments.push(`<dt>${obj.label}</dt><dd>${obj.quantity}${obj.unit}</dd>`);
+                    })
+
+                    let html = `<dl>
+                        <dt>Calories</dt>
+                        <dd>${data.calories}</dd>
+                        ${fragments.join('')}
+                        </dl>`;
+
+                    output.innerHTML = html;
+
+                    console.log(data)
+                });
+            })
+        })();
+
+    </script>
+
+
+    <div class="recipies-title">
+        <h1>Taco Recipe</h1>
+        <div class="recipies-description">
+            <p>Delicious beef tacos!</p>
+        </div>
+        <div class="recipies-image"><img src="../Images/pozole.jpg" alt=""></div>
+        <div class="ingredients-list">
+            <ol>
+                <h2>Ingredients</h2>
+                <li>One Onion</li>
+                <br>
+                <li>One Red Pepper</li>
+                <br>
+                <li>One Green Pepper</li>
+                <br>
+                <li>Olive Oil</li>
+                <br>
+                <li>Two Gloves of Garlic</li>
+                <br>
+                <li>One pinch of paprika</li>
+                <br>
+                <li>One & a half teaspoons cumin</li>
+                <br>
+                <li>500g quality minced beef</li>
+                <br>
+                <li>250mls organic beef stock</li>
+                <br>
+                <li>12 corn taco shells</li>
+            </ol>
+        </div>
+        <br>
+        <div class="ingredients-list">
+            <ol>
+                <h2>Instructions</h2>
+                <li>First peel and cut the onion into small cubes, then remove the seeds from the peppers and chop them finely. Add 1 tablespoon of oil in a large
+                    pan over a low heat then add the onion and peppers.</li>
+                <br>
+                <li>Then peel the garlic cloves and finely dice them, then add it some paprika and cumin for flavour, and cook for 1 to 2
+                    minutes. Once that is done then added the beef to the pan until it is browned.</li>
+                <br>
+                <li>Once the meat has been browned then add in the stock and place a lid on the pan. Leave it to cook away for 40 - 50 minutes.</li>
+                <br>
+                <li>Heat the oven to 180ºC/350ºF/gas 4.</li>
+                <br>
+                <li>After heating the oven put in the taco shells on a baking tray and let them crisp up for 5 minutes.</li>
+                <br>
+                <li>Once the taco shells are crispy and the filling is cooked, simply create the tacos and enjoy!</li>
+            </ol>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="f60b8ec8-030d-4229-8415-47bea2388218"
+            data-page-id="3" data-page-url="pozole-recipe.html" data-page-title="Pozole Recipe"></div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+
+        <!--
+        <div id="comments">
+            <h4>Comments</h4>
+            <ul id="oldComments"></ul>
+            <form id="addComment">
+                <label for="tbName">Username</label>
+                <br>
+                <input id="tbName" type="text" maxlength="25" required>
+                <br>
+                <label for="newComment">Your comment</label>
+                <br>
+                <textarea id="newComment" maxlength="2048" style="width: 20%;" required></textarea>
+                <br>
+                <input type="submit" id="btnSubmitComment" value="Submit Comment">
+            </form>
+        </div>
+        -->
+
+    </div>
+
+</body>
+
+</html>

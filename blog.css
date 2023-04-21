@@ -1,0 +1,112 @@
+.container {
+	
+	background: linear-gradient(
+	to right,
+	#ff9e2c 0%, 
+    #ff9e2c 0%, 
+    #b6701e 50%, 
+    #b6701e 100%
+  );
+}
+
+/* Pen-specific styles */
+html, body { 
+  color: #fff;
+  height: 100%;
+}
+
+/* Pattern styles */
+.container {
+  background: linear-gradient(
+    to right, 
+    #ffffff 0%, 
+    #ffffff 50%, 
+    #00ff00 50%, 
+    #00ff00 100%
+  );
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+p {
+  font-size: 1rem;
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 37%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+img {
+  position: absolute;
+  left: 1%;
+  top: 20%;
+}
+
+h5 {
+  color: black;
+
+}
+
+:root {
+  --container-bg-color: #333;
+  --left-bg-color: rgba(177, 174, 174, 0.7);
+  --left-button-hover-color: rgba(161, 11, 11, 0.3);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --right-button-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+html, body {
+  padding:0;
+  margin:0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+  color: black;
+  position: absolute;
+  left: 4.5%;
+  top: 1%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--container-bg-color);
+}
