@@ -1,7 +1,7 @@
-function init()
+function findWords()
 {
     //creates a variable equal to the value entered in the text box
-    var lookfor = document.getElementById("cuisines-header").value
+    var searchHeader = document.getElementById("cuisines-header").value
     //splits the whole page into an array or words
     var words = document.body.innerHTML.split(" ");
     ///loops through the array to get each word
@@ -11,7 +11,7 @@ function init()
         //in the textbox(lookfor) matches somthing on the page. it will get highlighted. i
         //was thinking about using the find object, but im new to javascript and dont know 
         //how to properly use find yet.
-        if(lookfor == words[i]) //Find()------
+        if(searchHeader == words[i]) //Find()------
         { 
             '<span class="highlight">' + words + '</span>'
         }        
