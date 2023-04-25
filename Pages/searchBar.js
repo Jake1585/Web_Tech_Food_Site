@@ -10,7 +10,7 @@ function findWords()
 
         if(searchHeader == words[i])
         { 
-            return value
+            return words
         }        
     }
 }
