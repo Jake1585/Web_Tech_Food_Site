@@ -1,10 +1,10 @@
 function findWords()
 {
-    //creates a variable equal to the value entered in the text box
+    // searches for the recipe name in the header div
     var searchHeader = document.getElementById("cuisines-header").value
-    //splits the whole page into an array or words
+
     var words = document.body.innerHTML.split(" ");
-    ///loops through the array to get each word
+    // for loop to get search each word found in the array
     for( var i=0; i<words.length; i++)
     {      
 
