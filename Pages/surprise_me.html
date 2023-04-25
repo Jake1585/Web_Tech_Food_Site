@@ -4,29 +4,32 @@
 	<link rel="stylesheet" href="../surprise.css">
 	<title>Surprise Me</title>
     <script type="text/javascript">
-        <!--
-        // Create an array of the links to choose from:
-        var links = new Array();
-        links[0] = "tacos-recipe.html";
-        links[1] = "burrito-recipe.html";
-        links[2] = "chaat-recipe.html";
-        links[3] = "lasagne-recipe.html";
-        links[4] = "margherita-pizza-recipe.html";
-        links[5] = "masala-dosa-recipe.html";
-        links[6] = "risotto-recipe.html";
-        links[7] = "pakora-recipe.html";
-        links[8] = "pozole-recipe.html";
 
+        // This is an array which will hold the links to all recipe sites.
 
+        var recipe = new Array();
+        recipe[0] = "tacos-recipe.html";
+        recipe[1] = "burrito-recipe.html";
+        recipe[2] = "chaat-recipe.html";
+        recipe[3] = "lasagne-recipe.html";
+        recipe[4] = "margherita-pizza-recipe.html";
+        recipe[5] = "masala-dosa-recipe.html";
+        recipe[6] = "risotto-recipe.html";
+        recipe[7] = "pakora-recipe.html";
+        recipe[8] = "pozole-recipe.html";
 
-        function openLink() {
-          // Chooses a random link:
-          var i = Math.floor(Math.random() * links.length);
-          // Directs the browser to the chosen target:
-          parent.location = links[i];
+        function openRecipe() {
+
+          // This will select a link from the list above randomly
+
+          var picker = Math.floor(Math.random() * recipe.length);
+
+          // This then redirects the user to the randomly selected recipe link
+          
+          parent.location = recipe[picker];
           return false;
         }
-        //-->
+
         </script>
 	</head>
 	
@@ -37,7 +40,6 @@
         <li><a href="recipe.html">Recipes</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="surprise me.html">Surprise Me</a></li>
-	<li><a href="recipe-checker.html">Recipe Nutrition</a></li>
         <li style="float:right"><a href="login.html">Login</a></li>
         <li style="float:right"><a href="#about us">About Us</a></li>
     </ul>
@@ -45,10 +47,10 @@
     <div class="split right">
         <h1>Surprise Me!</h1>
         <p>Sign up to take part in discussions, post your own recipes and give reviews!</p>
-        <button class="button3" onclick="openLink();" >Surprise Me!</button>
+        <button class="button3" onclick="openRecipe();" >Surprise Me!</button>
     </div>
 
-    <IMG SRC=" " id="image">
+    <img src=" " id="image">
 
     <script type="text/javascript">
         let image = document.getElementById('image');
