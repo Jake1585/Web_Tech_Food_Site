@@ -8,9 +8,9 @@ function findWords()
     for( var i=0; i<words.length; i++)
     {      
 
-        if(searchHeader == words[i]) //Find()------
+        if(searchHeader == words[i])
         { 
-            '<span class="highlight">' + words + '</span>'
+            return value
         }        
     }
 }
